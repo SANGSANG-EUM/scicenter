@@ -18,7 +18,7 @@ select::-ms-expand {display: none;}
 
 /* guide line */
 .container {width: 100%; padding-left: 40px; padding-right: 40px;}
-.wrapper {width: 1500px; max-width: 100%; margin: 0 auto;}
+.wrapper {width: 1400px; max-width: 100%; margin: 0 auto;}
 .wrapper2 {width: 1280px; max-width: 100%; margin: 0 auto;}
 
 /* text cut */
@@ -28,6 +28,9 @@ select::-ms-expand {display: none;}
 
 /* sound only */
 .sound_only{display: inline-block !important; position: absolute; top: 0; left: 0; width: 0; height: 0; margin: 0 !important; padding: 0 !important; font-size: 0; line-height: 0; border: 0 !important; overflow: hidden !important;}
+
+/* Scroll lock */
+.scrollLock {overflow: hidden; touch-action: none;}
 
 /* clearfix */
 .cf:before,

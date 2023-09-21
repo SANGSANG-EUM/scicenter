@@ -29,9 +29,12 @@ if(defined('_INDEX_')) { // index에서만 실행
 ?>
 
 <!-- 헤더 시작 { -->
-<div id="header">
+<div id="header" class="<?php if(defined('_INDEX_')){echo 'main';} ?>">
   <h1 id="hd_logo">
-    <a href="/">LOGO</a>
+    <a href="/">
+      <img src="/source/img/logo-w.png" alt="한국과학관협회">
+      <img src="/source/img/logo-c.png" alt="한국과학관협회">
+    </a>
   </h1>
 
   <nav id="hd_gnb">
@@ -63,6 +66,71 @@ if(defined('_INDEX_')) { // index에서만 실행
   </nav>
 </div>
 <!-- } 헤더 끝 -->
+
+<!-- 사이드 메뉴 시작 { -->
+<div class="side-menu">
+  <ul class="side-ul">
+    <li>
+      <button class="menu-btn">
+        <?php for($i=0; $i<9; $i++){echo '<span></span>';} ?>
+      </button>
+    </li>
+    <li>
+      <a href="">
+        <span><img src="/source/img/side-menu-icon01.png" alt="과학해설사"></span>
+        <span>과학해설사</span>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <span><img src="/source/img/side-menu-icon02.png" alt="연구성과"></span>
+        <span>연구성과</span>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <span><img src="/source/img/side-menu-icon03.png" alt="전시교류사업"></span>
+        <span>전시교류사업</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="side-bottom-ul">
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon01.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon02.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon03.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon04.png" alt="">
+      </a>
+    </li>
+    <li>
+      <?php if(defined('_INDEX_')){ ?>
+      <a href="#page1" class="top-btn">
+        <span><img src="/source/img/icon-top.png" alt=""></span>
+        <span>TOP</span>
+      </a>
+      <?php }else{ ?>
+      <button class="top-btn">
+        <span><img src="/source/img/icon-top.png" alt=""></span>
+        <span>TOP</span>
+      </button>
+      <?php } ?>
+    </li>
+  </ul>
+</div>
+<!-- } 사이드 메뉴 시작 -->
 
 
 <!-- 콘텐츠 시작 { -->

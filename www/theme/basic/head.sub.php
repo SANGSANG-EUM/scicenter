@@ -98,6 +98,7 @@ add_javascript('<script src="'.EUM_PLUGIN_URL.'/aos/aos.js" defer></script>', 0)
 add_javascript('<script src="'.EUM_PLUGIN_URL.'/scrollbar/lenis.js" defer></script>', 0);
 add_javascript('<script src="'.EUM_PLUGIN_URL.'/niceselect/jquery.nice-select.min.js" defer></script>', 0);
 add_javascript('<script src="'.EUM_PLUGIN_URL.'/swiper/swiper-bundle.min.js" defer></script>', 0);
+add_javascript('<script src="'.EUM_PLUGIN_URL.'/fullpage/jquery.fullpage.js" defer></script>', 0);
 /*} Plug-in, Library */
 add_javascript('<script type="module" src="'.EUM_JS_URL.'/functions.js" defer></script>', 0);
 add_javascript('<script type="module" src="'.EUM_JS_URL.'/normal.js" defer></script>', 0);
@@ -110,6 +111,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EUM_PLUGIN_URL.'/aos/aos.css">', 
 add_stylesheet('<link rel="stylesheet" href="'.EUM_PLUGIN_URL.'/scrollbar/jquery.mCustomScrollbar.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="'.EUM_PLUGIN_URL.'/niceselect/nice-select.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="'.EUM_PLUGIN_URL.'/swiper/swiper-bundle.min.css">', 0);
+add_stylesheet('<link rel="stylesheet" href="'.EUM_PLUGIN_URL.'/fullpage/jquery.fullpage.css">', 0);
 /*} Plug-in, Library */
 add_stylesheet('<link rel="stylesheet" href="'.EUM_CSS_URL.'/fonts.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="'.EUM_CSS_URL.'/common.css">', 0);
@@ -122,6 +124,7 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php

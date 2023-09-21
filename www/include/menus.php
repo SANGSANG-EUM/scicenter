@@ -3,63 +3,120 @@ include_once('./_common.php');
 
 $sb_menus = [
   [
-    'id' => 'introduce',
-    'name' => '회사소개',
-    'link' => '/sub/test',
+    'id' => '',
+    'name' => '회원기관',
+    'link' => '',
     'sb_2menus' => [
       [
-        'id' => 'aboutus',
-        'name' => '회사소개',
-        'link' => '/sub/test',
-        'sb_3menus' => [
-          [
-            'id' => 'vision',
-            'name' => '비전',
-            'link' => '/sub/test'
-          ],
-          [
-            'id' => 'organization',
-            'name' => '조직도',
-            'link' => '/sub/test'
-          ]
-        ]
+        'id' => '',
+        'name' => '회원가입 명단',
+        'link' => '',
       ],
       [
-        'id' => 'greeting',
-        'name' => 'CEO인사말',
-        'link' => '/sub/test'
+        'id' => '',
+        'name' => '회원기관 소식',
+        'link' => ''
       ],
       [
-        'id' => 'location',
-        'name' => '오시는 길',
-        'link' => '/sub/test'
+        'id' => '',
+        'name' => '전국 과학관 현황',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '회원가입 안내',
+        'link' => ''
       ]
     ]
   ],
   [
-    'id' => 'cs',
-    'name' => '고객지원',
-    'link' => '/qa',
+    'id' => '',
+    'name' => '사업소개',
+    'link' => '',
     'sb_2menus' => [
       [
-        'id' => 'qa',
-        'name' => '문의하기',
-        'link' => '/qa/write'
+        'id' => '',
+        'name' => '지역과학관 활성화 지원 사업',
+        'link' => '',
       ],
       [
-        'id' => 'gallery',
-        'name' => '갤러리',
-        'link' => '/gallery'
+        'id' => '',
+        'name' => '두드림 프로젝트 사업',
+        'link' => ''
       ],
       [
-        'id' => 'notice',
+        'id' => '',
+        'name' => '금요일에 과학터치',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '전국 과학관 길라잡이',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '전국 과학관 현황조사',
+        'link' => ''
+      ]
+    ]
+  ],
+  [
+    'id' => '',
+    'name' => '커뮤니티',
+    'link' => '',
+    'sb_2menus' => [
+      [
+        'id' => '',
         'name' => '공지사항',
-        'link' => '/notice'
+        'link' => '',
       ],
       [
-        'id' => 'faq',
-        'name' => '자주묻는질문',
-        'link' => '/faq'
+        'id' => '',
+        'name' => '채용공고',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '전국과학관 e소식지',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '과기정통부 소식',
+        'link' => ''
+      ]
+    ]
+  ],
+  [
+    'id' => '',
+    'name' => '협회소개',
+    'link' => '',
+    'sb_2menus' => [
+      [
+        'id' => '',
+        'name' => '인사말',
+        'link' => '',
+      ],
+      [
+        'id' => '',
+        'name' => '기관소개',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '조직도',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => 'CI 소개',
+        'link' => ''
+      ],
+      [
+        'id' => '',
+        'name' => '오시는 길',
+        'link' => ''
       ]
     ]
   ]
