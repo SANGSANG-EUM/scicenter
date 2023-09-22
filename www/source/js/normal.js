@@ -1,4 +1,17 @@
 /**
+ * [공통] 모바일 브라우저 100vh 해결
+ */
+const mobileHeight = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+}
+
+/**
  * [메인] 풀페이지
  */
 const mainFullPage = () => {
@@ -7,12 +20,30 @@ const mainFullPage = () => {
     autoScrolling:true,
     //navigation: true,
     showActiveTooltip: false,
-    //responsiveWidth: 1024,
+    responsiveWidth: 1025,
     onLeave: function(anchorLink, index){
-      if(index == 2 || index == 4 || index == 5){
-        $('#header').addClass('white');
-      }else{
-        $('#header').removeClass('white');
+      let winW = $(window).outerWidth();
+
+      $(window).on('resize',function(){
+        winW = $(window).outerWidth();
+      });
+
+      if(winW >= 1025){ // 1025 이상일 떄
+        if(index == 2 || index == 4 || index == 5){
+          $('#header').addClass('white');
+        }else{
+          $('#header').removeClass('white');
+        }
+      }else{ // 1025 미만일 때
+        $(window).scroll(function(){
+          var scroll = $(window).scrollTop();
+          if (scroll > 1) {
+            $('#header').addClass('white mo');
+          }
+          else{
+            $('#header').removeClass('white mo');
+          }
+        });    
       }
     }
   });
@@ -34,7 +65,7 @@ const mainFullPage = () => {
  */
 const mainVisualSlide = () => {
   let mvSwiper = new Swiper('.main_visual',{
-    slidesPerView : 'auto', // 한 슬라이드에 보여줄 갯수
+    slidesPerView : 1, // 한 슬라이드에 보여줄 갯수
     loop : true,   // 슬라이드 반복 여부
     loopAdditionalSlides : 1,
     autoplay: {     //자동슬라이드 (false-비활성화)
@@ -94,7 +125,7 @@ const mainContentList = () => {
  */
 const ftRelationSlide = () => {
   let ftSwiper = new Swiper('.relation_slide_list',{
-    slidesPerView : 7, // 한 슬라이드에 보여줄 갯수
+    slidesPerView : 1, // 한 슬라이드에 보여줄 갯수
     loop : true,   // 슬라이드 반복 여부
     loopAdditionalSlides : 1,
     autoplay: {     //자동슬라이드 (false-비활성화)
@@ -105,9 +136,26 @@ const ftRelationSlide = () => {
       nextEl: ".relation_slide_next",
       prevEl: ".relation_slide_prev",
     },
+    breakpoints: {
+      420: {
+        slidesPerView : 2,
+      },
+      767: {
+        slidesPerView : 4,
+      },
+      1023: {
+        slidesPerView : 5,
+      },
+      1290: {
+        slidesPerView : 7,
+      },
+    },
   });
 }
 
+/**
+ * [공통] 탑버튼 위로가기
+ */
 const topBtnFunc = () => {
   $('.top-btn').on('click',function(){
     $('html, body').animate({
@@ -116,11 +164,54 @@ const topBtnFunc = () => {
   });
 }
 
+const allMenuBtn = () => {
+  let menuBtn = $('.menu-btn');
+  menuBtn.on('click',function(){
+    if($(this).hasClass('open')){
+      $(this).removeClass('open');
+    }else{
+      $(this).addClass('open');
+    }
+  });
+}
+
+const moPlusBtn = () => {
+  let moBtn = $('.mo_bottom_plus');
+  let hiddenMenu = $('.mo_bottom_hide_menu');
+  let moTopBtn = $('.mo_top_btn');
+
+  //moTopBtn.css({'opacity':'0'});
+  //$(window).scroll(function(){
+  //  let scroll = $(window).scrollTop();
+  //  if (scroll > 1) {
+  //    moTopBtn.css({'opacity':'1'});
+  //  }
+  //  else{
+  //    moTopBtn.css({'opacity':'0'});
+  //  }
+  //});
+
+  moBtn.on('click',function(){
+    if($(this).hasClass('open')){
+      $(this).removeClass('open');
+      hiddenMenu.removeClass('open');
+      moTopBtn.removeClass('hide');
+    }else{
+      $(this).addClass('open');
+      hiddenMenu.addClass('open');
+      moTopBtn.addClass('hide');
+    }
+  });
+}
+
 // document ready
 $(document).ready(function(){
+  mobileHeight();
   mainFullPage();
   mainVisualSlide();
   mainContentList();
   ftRelationSlide();
   topBtnFunc();
+  allMenuBtn();
+  moPlusBtn();
 }); // document ready end

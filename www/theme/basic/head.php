@@ -132,6 +132,94 @@ if(defined('_INDEX_')) { // index에서만 실행
 </div>
 <!-- } 사이드 메뉴 시작 -->
 
+<!-- 모바일 하단 메뉴 { -->
+<div class="mo_bottom_menu">
+  <ul class="i-col-4 mo_bottom_menu_list">
+    <li>
+      <a href="">
+        <span><img src="/source/img/side-menu-icon01.png" alt="과학해설사"></span>
+        <span>과학해설사</span>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <span><img src="/source/img/side-menu-icon02.png" alt="연구성과"></span>
+        <span>연구성과</span>
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <span><img src="/source/img/side-menu-icon03.png" alt="전시교류사업"></span>
+        <span>전시교류사업</span>
+      </a>
+    </li>
+    <li>
+      <button class="mo_bottom_plus">
+        <span class="bar"></span>
+      </button>
+    </li>
+    <!-- <li>
+      <?php if(defined('_INDEX_')){ ?>
+      <a href="#page1" class="top-btn">
+        <span>TOP</span>
+      </a>
+      <?php }else{ ?>
+      <button class="top-btn">
+        <span>TOP</span>
+      </button>
+      <?php } ?>
+    </li> -->
+  </ul>
+  <ul class="i-col-4 mo_bottom_hide_menu">
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon01.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon02.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon03.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="/source/img/side-sns-icon04.png" alt="">
+      </a>
+    </li>
+    <!-- <li>
+      <?php if(defined('_INDEX_')){ ?>
+      <a href="#page1" class="top-btn">
+        <span>TOP</span>
+      </a>
+      <?php }else{ ?>
+      <button class="top-btn">
+        <span>TOP</span>
+      </button>
+      <?php } ?>
+    </li> -->
+  </ul>
+</div>
+<!-- } 모바일 하단 메뉴 -->
+
+<!-- 모바일 TOP 버튼 { -->
+<div class="mo_top_btn">
+  <?php if(defined('_INDEX_')){ ?>
+  <a href="#page1" class="top-btn">
+    <span>TOP</span>
+  </a>
+  <?php }else{ ?>
+  <button class="top-btn">
+    <span>TOP</span>
+  </button>
+  <?php } ?>
+</div>
+<!-- } 모바일 TOP 버튼 -->
+
 
 <!-- 콘텐츠 시작 { -->
 <div id="contents_dom">
